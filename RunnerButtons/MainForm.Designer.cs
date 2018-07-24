@@ -29,45 +29,17 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.first_btn = new RunnerButtons.ButtonCompare();
-            this.second_btn = new RunnerButtons.ButtonCompare();
-            this.third_btn = new RunnerButtons.ButtonCompare();
             this.start_btn = new System.Windows.Forms.Button();
             this.pause_btn = new System.Windows.Forms.Button();
             this.stop_btn = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.third_btn = new RunnerButtons.ButtonCompare();
+            this.second_btn = new RunnerButtons.ButtonCompare();
+            this.first_btn = new RunnerButtons.ButtonCompare();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // first_btn
-            // 
-            this.first_btn.Location = new System.Drawing.Point(13, 13);
-            this.first_btn.Name = "first_btn";
-            this.first_btn.Size = new System.Drawing.Size(75, 23);
-            this.first_btn.TabIndex = 0;
-            this.first_btn.Text = "button1";
-            this.first_btn.UseVisualStyleBackColor = true;
-            this.first_btn.Click += new System.EventHandler(this.first_btn_Click);
-            // 
-            // second_btn
-            // 
-            this.second_btn.Location = new System.Drawing.Point(12, 42);
-            this.second_btn.Name = "second_btn";
-            this.second_btn.Size = new System.Drawing.Size(75, 23);
-            this.second_btn.TabIndex = 1;
-            this.second_btn.Text = "button2";
-            this.second_btn.UseVisualStyleBackColor = true;
-            // 
-            // third_btn
-            // 
-            this.third_btn.Location = new System.Drawing.Point(13, 71);
-            this.third_btn.Name = "third_btn";
-            this.third_btn.Size = new System.Drawing.Size(75, 23);
-            this.third_btn.TabIndex = 2;
-            this.third_btn.Text = "button3";
-            this.third_btn.UseVisualStyleBackColor = true;
             // 
             // start_btn
             // 
@@ -121,6 +93,33 @@
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
+            // third_btn
+            // 
+            this.third_btn.Location = new System.Drawing.Point(13, 71);
+            this.third_btn.Name = "third_btn";
+            this.third_btn.Size = new System.Drawing.Size(75, 23);
+            this.third_btn.TabIndex = 2;
+            this.third_btn.Text = "button3";
+            this.third_btn.UseVisualStyleBackColor = true;
+            // 
+            // second_btn
+            // 
+            this.second_btn.Location = new System.Drawing.Point(13, 42);
+            this.second_btn.Name = "second_btn";
+            this.second_btn.Size = new System.Drawing.Size(75, 23);
+            this.second_btn.TabIndex = 1;
+            this.second_btn.Text = "button2";
+            this.second_btn.UseVisualStyleBackColor = true;
+            // 
+            // first_btn
+            // 
+            this.first_btn.Location = new System.Drawing.Point(13, 13);
+            this.first_btn.Name = "first_btn";
+            this.first_btn.Size = new System.Drawing.Size(75, 23);
+            this.first_btn.TabIndex = 0;
+            this.first_btn.Text = "button1";
+            this.first_btn.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -133,7 +132,7 @@
             this.Controls.Add(this.first_btn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
-            this.Text = "Гонки";
+            this.Text = "Гонки кнопок";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);

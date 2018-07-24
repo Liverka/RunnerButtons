@@ -9,7 +9,7 @@ namespace RunnerButtons
     public partial class MainForm : Form
     {
         Thread t1; 
-        Thread t2; 
+        Thread t2;
         Thread t3; 
 
         ManualResetEvent mre;
@@ -37,10 +37,6 @@ namespace RunnerButtons
         {
 
         }
-        private void first_btn_Click(object sender, EventArgs e)
-        {
-
-        }
         private void start_btn_Click(object sender, EventArgs e)
         {
             switcher(false,true,true);
@@ -53,8 +49,7 @@ namespace RunnerButtons
             {
                 t1 = new Thread(Movement1);
                 t2 = new Thread(Movement2);
-                t3 = new Thread(Movement3);
-                                
+                t3 = new Thread(Movement3);                                
 
                 t1.IsBackground = t2.IsBackground = t3.IsBackground = true;
 
@@ -70,9 +65,7 @@ namespace RunnerButtons
         {           
             button.Location = new Point(button.Location.X + r.Next(3), button.Location.Y);
             Lider();
-
             Finish(button);
-
         }
 
         private void Finish(Button button)
@@ -81,11 +74,8 @@ namespace RunnerButtons
             {
                 pause_btn_Click(new object(), new EventArgs());
                 start_btn.Enabled = false;
-
                 MessageBox.Show("Выиграла кнопка " + button.Text);
             }
-
-
         }
 
         private void Lider()   
@@ -95,6 +85,7 @@ namespace RunnerButtons
             for (int i = 1; i < button.Length;i++)
                 button[i].BackColor = SystemColors.Control;
         }
+
         void Movement1()
         {
             while (true)
@@ -114,29 +105,25 @@ namespace RunnerButtons
                 Thread.Sleep(r.Next(5, 40));                                            
             }
         }
+
         void Movement3()
         {
             while (true)
             {
                 mre.WaitOne();
                 Invoke(helper, third_btn);
-                Thread.Sleep(r. Next(5, 40));                               
-                
+                Thread.Sleep(r. Next(5, 40));                                             
             }
         }
 
-
         private void pause_btn_Click(object sender, EventArgs e)
         {
-            switcher(true, false, true);
-            
+            switcher(true, false, true);            
             if (t1 != null)
             {
                 mre.Reset();
             }       
-        }
-
-
+        }        
 
         private void Reset()
         {
@@ -144,9 +131,8 @@ namespace RunnerButtons
             second_btn.Location = new Point(13, second_btn.Location.Y);
             third_btn.Location = new Point(13, third_btn.Location.Y);
 
-            foreach (ButtonCompare buttona in button)
-                buttona.BackColor = SystemColors.Control;
-
+            foreach (ButtonCompare buttons in button)
+                buttons.BackColor = SystemColors.Control;
         }
 
         private void stop_btn_Click(object sender, EventArgs e)
@@ -166,8 +152,7 @@ namespace RunnerButtons
                 t3.Abort();
             }
         }
-
-
+        
         void switcher(bool flagStart,bool flagPause,bool flagStop)
         {
             start_btn.Enabled = flagStart;

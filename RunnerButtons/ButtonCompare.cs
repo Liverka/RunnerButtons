@@ -3,9 +3,6 @@ using System.Windows.Forms;
 
 namespace RunnerButtons
 {
-    /// <summary>
-    /// Представляет из себя обычную кнопку, но с функцией сравнения
-    /// </summary>
     class ButtonCompare : Button, IComparable
     {
         public int CompareTo(object obj)
